@@ -4,7 +4,7 @@ App created for FRC scouting with the best data management and algorithms you co
 
 This app is created using React Native.
 
-Native app release (for better performance): Coming Soon.
+Native iOS/Android app release (for better performance): Coming Soon.
 
 ## Usage
 
