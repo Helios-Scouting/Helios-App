@@ -3,6 +3,7 @@ import { StyleSheet, View, Text } from 'react-native';
 import NavBar from './components/Navbar';
 import Matches from './components/Matches';
 import SettingsMenu from './components/SettingsMenu';
+import SurveyComponent from './components/Survey';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function App() {
@@ -16,17 +17,23 @@ export default function App() {
     setActiveMenu('settings');
   };
 
+  const handlePressSurvey = () => {
+    setActiveMenu('survey');
+  };
+
   return (
     <GestureHandlerRootView style={styles.container}>
       <Text style={styles.title}>Helios-Project</Text>
 
       {activeMenu === 'matches' && <Matches />}
       {activeMenu === 'settings' && <SettingsMenu />}
+      {activeMenu === 'survey' && <SurveyComponent />}
 
       <NavBar
         activeMenu={activeMenu}
         onPressMatches={handlePressMatches}
         onPressSettings={handlePressSettings}
+        onPressSurvey={handlePressSurvey}
       />
     </GestureHandlerRootView>
   );
